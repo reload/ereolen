@@ -140,4 +140,30 @@
     width: var(--radix-popover-trigger-width);
     max-height: var(--radix-popover-content-available-height);
   }
+  .app-gradient {
+    background: linear-gradient(
+      to bottom,
+      var(--primary),
+      oklch(0.36 0.22 14.76),
+      oklch(0.26 0.16 14.76),
+      oklch(0.205 0 0)
+    );
+  }
+  .app-gradient-small {
+    background: linear-gradient(
+      to bottom,
+      var(--primary),
+      oklch(0.36 0.22 14.76)
+    );
+    @apply hover:brightness-110;
+  }
+  /* 
+    .app-gradient-small {
+    background: linear-gradient(
+      to bottom,
+      var(--primary),
+      oklch(0.36 0.22 14.76),
+      oklch(0.26 0.16 14.76)
+    );
+  } */
 }

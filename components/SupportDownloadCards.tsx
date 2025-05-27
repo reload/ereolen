@@ -35,7 +35,7 @@ const SupportDownloadCards = () => {
       {/* Help and Support */}
       <CardWrapper
         href={helpANdSupportLink}
-        className="bg-primary hover:no-underline"
+        className="app-gradient-small hover:no-underline"
       >
         <div className="flex items-center gap-4">
           <div className="flex size-20 shrink-0 items-center justify-center rounded-full border-4 border-white text-6xl font-bold">
