@@ -617,21 +617,21 @@ export const libraries = [
     label: "Jammerbugt Bibliotekerne",
     domain: "jammerbugtbibliotekerne.dk",
     secondaryDomains: ["www.jammerbugtbibliotekerne.dk"],
-    // customPath: "",
+    customPath: "/e-material/ereolen",
   },
   {
     value: "slagelse",
     label: "Slagelse Bibliotekerne",
     domain: "slagelsebib.dk",
     secondaryDomains: ["www.slagelsebib.dk"],
-    // customPath: "",
+    customPath: "/e-material/ereolen",
   },
   {
     value: "lemvig",
     label: "Lemvig Bibliotek",
     domain: "lemvigbib.dk",
     secondaryDomains: ["www.lemvigbibliotek.dk"],
-    // customPath: "",
+    customPath: "/e-material/ereolen",
   },
   {
     value: "tonder",
@@ -639,5 +639,12 @@ export const libraries = [
     domain: "tbib.dk",
     secondaryDomains: ["www.tbib.dk"],
     customPath: "/e-material/ereolen",
+  },
+  {
+    value: "katak",
+    label: "Katak",
+    domain: "katak.gl",
+    secondaryDomains: [],
+    customPath: "/da/ereolen",
   },
 ];
