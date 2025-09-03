@@ -82,6 +82,12 @@ export const libraries = [
     secondaryDomains: ["drabib.dk"],
   },
   {
+    value: "býarbókasavnið",
+    label: "Býarbókasavnið",
+    domain: "https://www.bbs.fo/",
+    secondaryDomains: [],
+  },
+  {
     value: "egedal",
     label: "Egedal Bibliotekerne",
     domain: "egedalbibliotekerne.dk",
