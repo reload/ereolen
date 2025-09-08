@@ -629,7 +629,7 @@ export const libraries = [
   {
     value: "lemvig",
     label: "Lemvig Bibliotek",
-    domain: "lemvigbib.dk",
+    domain: "lemvigbibliotek.dk",
     secondaryDomains: ["www.lemvigbibliotek.dk"],
     customPath: "/e-material/ereolen",
   },
