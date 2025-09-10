@@ -6,9 +6,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function buildRedirectParam(pathname: string, search: string): string {
-  const basePath = pathname.startsWith("/ereolen") ? "/ereolen" : "";
+  // For custom domain - no basePath prefix needed
   const fullPath = pathname + search;
-  return `${basePath}/?from=${encodeURIComponent(fullPath)}`;
+  return `/?from=${encodeURIComponent(fullPath)}`;
 }
 
 type BuildRedirectUrlParams = {
