@@ -5,6 +5,7 @@ Dette projekt er bygget for at sikre, at gamle links til Ereolen materialer på 
 Den bruges f.eks. til at omskrive links fra `/ting/object/:id` til den "nye" struktur `/work/work-of::id`.
 
 Siden kan ses her [https://reload.github.io/ereolen/](https://reload.github.io/ereolen/)
+Ny adresse: [https://ereolen.dk](https://ereolen.dk)
 
 ---
 
