@@ -541,7 +541,7 @@ export const libraries = [
   },
   {
     value: "sydslesvig",
-    label: "Sydslesvig bibliotek",
+    label: "Dansk Centralbibliotek for Sydslesvig",
     domain: "www.dcbib.dk",
     secondaryDomains: ["dcbib.dk"],
   },
@@ -565,7 +565,7 @@ export const libraries = [
   },
   {
     value: "thisted",
-    label: "Thy Biblioteket",
+    label: "Biblioteket KulturRummet (Thy)",
     domain: "bib.kulturrummet.dk",
     secondaryDomains: [],
   },
@@ -583,7 +583,7 @@ export const libraries = [
   },
   {
     value: "vejen",
-    label: "Vejen Bibliotekerne",
+    label: "Vejen Kommunes Biblioteker",
     domain: "vejbib.dk",
     secondaryDomains: ["www.vejbib.dk"],
   },
@@ -635,14 +635,14 @@ export const libraries = [
   },
   {
     value: "tonder",
-    label: "Tønder Bibliotekerne",
+    label: "Tønder Kommunes Biblioteker",
     domain: "tbib.dk",
     secondaryDomains: ["www.tbib.dk"],
     customPath: "/e-material/ereolen",
   },
   {
     value: "katak",
-    label: "Katak",
+    label: "Nunatta Atuagaateqarfia",
     domain: "katak.gl",
     secondaryDomains: [],
     customPath: "/da/ereolen",
