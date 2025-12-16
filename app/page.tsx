@@ -22,7 +22,7 @@ export default function Home() {
         <HtmlContent src="/content/main.html" />
         <div className="mx-auto mt-16 space-y-4">
           <Typography variant={"h3"} as={"h2"}>
-            Vælg dit lokale bibliotek for at få adgang til eReolen
+            Vælg din bibliotekskommune for at få adgang til eReolen
           </Typography>
           <LibrarySelect />
         </div>
