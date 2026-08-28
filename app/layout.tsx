@@ -14,21 +14,21 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ereolen.dk"),
-  title: "eReolen",
+  title: "Biblo",
   description:
-    "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
+    "eReolen hedder nu Biblo. Vælg dit bibliotek her for at gå til dit biblioteks hjemmeside.",
   openGraph: {
-    title: "eReolen",
+    title: "Biblo",
     description:
-      "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
-    images: [addBasePath("/ereolen_logo_some.png")],
+      "eReolen hedder nu Biblo. Vælg dit bibliotek her for at gå til dit biblioteks hjemmeside.",
+    images: [addBasePath("/Biblo-Logo-green.png")],
   },
   twitter: {
     card: "summary_large_image",
-    title: "eReolen",
+    title: "Biblo",
     description:
-      "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
-    images: [addBasePath("/ereolen_logo_some.png")],
+      "eReolen hedder nu Biblo. Vælg dit bibliotek her for at gå til dit biblioteks hjemmeside.",
+    images: [addBasePath("/Biblo-Logo-green.png")],
   },
 };
 

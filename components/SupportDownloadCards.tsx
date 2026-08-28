@@ -28,24 +28,29 @@ const CardWrapper = ({ href, className = "", children }: CardWrapperProps) => {
 
   return <div className={classes}>{children}</div>;
 };
+const BibloMark = () => (
+  <Image
+    src={addBasePath("/Biblo-Logo-dark-green.png")}
+    alt=""
+    width={140}
+    height={50}
+    className="h-20 w-auto"
+  />
+);
 
 const SupportDownloadCards = () => {
   return (
     <section className="mt-auto grid w-full gap-6 md:grid-cols-2">
       {/* Help and Support */}
       <CardWrapper
-        href={helpANdSupportLink}
-        className="bg-primary hover:no-underline"
+        href={aboutBibloLink}
+        className="bg-card-primary text-card-primary-foreground hover:no-underline"
       >
-        <div className="flex items-center gap-4">
-          <div className="flex size-20 shrink-0 items-center justify-center rounded-full border-4 border-white text-6xl font-semibold">
-            ?
-          </div>
-          <div className="font-semibold">
-            <Typo as="p" variant="h4">
-              Hjælp og support
-            </Typo>
-          </div>
+        <div className="flex items-center gap-4 md:gap-6">
+          <BibloMark />
+          <Typography as="p" variant="p" className="!font-bold">
+            Læs mere om Biblo
+          </Typography>
         </div>
       </CardWrapper>
 

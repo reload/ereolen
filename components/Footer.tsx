@@ -48,30 +48,22 @@ const Footer = () => {
           <Link className="mb-2 block" href="tel:70263636">
             Tlf: 7026 3636
           </Link>
-          <Typo as="p" variant="small" className="mb-2">
-            For henvendelser uden for åbningstiden benyt venligst vores
-            kontaktformular{" "}
+          <Typography as="p" variant="small" className="mb-2">
+            For henvendelser uden for åbningstiden <br />
             <Link href={contactFormLink} className="underline">
-              her
+              benyt venligst vores kontaktformular her
             </Link>
             .
-          </Typo>
+          </Typography>
         </section>
 
         <div className="mx-auto mt-12 space-y-6 self-center justify-self-end md:col-span-2 md:col-start-3 md:mx-0 md:mt-0">
           <Image
             className="mx-auto"
             src={addBasePath("/ddf_logo.png")}
-            alt="Logo"
-            width={300}
-            height={200}
-          />
-          <div className="text-center">
-            <Typo as="p" variant="small" className="">
-              eReolen er en del af Det Digitale Folkebibliotek
-            </Typo>
-            <Link href="https://detdigitalefolkebibliotek.dk" target="_blank">
-              Læs mere på detdigitalefolkebibliotek.dk
+            <Typography as="p" variant="small">
+              Biblo er en del af Det Digitale Folkebibliotek
+            </Typography>
             </Link>
           </div>
         </div>

@@ -4,16 +4,12 @@ export const footerLinks = [
     href: "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/6",
   },
   {
-    label: "Hent eReolens app",
+    label: "Hent Biblo-appen",
     href: "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/6/article/299401218",
   },
   {
     label: "Materialevalg",
     href: "https://www.detdigitalefolkebibliotek.dk/materialevalg",
-  },
-  {
-    label: "Redaktion",
-    href: "https://www.detdigitalefolkebibliotek.dk/redaktion",
   },
   {
     label: "Driftsinfo",
@@ -24,5 +20,5 @@ export const footerLinks = [
 export const contactFormLink =
   "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/6";
 
-export const helpANdSupportLink =
-  "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/6";
+export const aboutBibloLink =
+  "https://www.detdigitalefolkebibliotek.dk/ereolen";
