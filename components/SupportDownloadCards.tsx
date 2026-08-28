@@ -1,11 +1,10 @@
-import { helpANdSupportLink } from "@/content/links";
+import { aboutBibloLink } from "@/content/links";
 import { addBasePath } from "@/lib/basePath";
 import Image from "next/image";
 import React from "react";
-import { Typography as Typo } from "@/components/typography";
-
-import { twMerge } from "tailwind-merge";
+import { Typography } from "@/components/typography";
 import { Link } from "@/components/link";
+import { cn } from "@/lib/utils";
 
 type CardWrapperProps = {
   children: React.ReactNode;
@@ -13,10 +12,11 @@ type CardWrapperProps = {
   href?: string;
 };
 
-const CardWrapper = ({ href, className = "", children }: CardWrapperProps) => {
-  const base =
-    "flex items-center rounded-xl p-6 shadow-lg text-white justify-center";
-  const classes = twMerge(base, className);
+const CardWrapper = ({ href, className, children }: CardWrapperProps) => {
+  const classes = cn(
+    "flex min-h-[120px] items-center justify-center rounded-xl p-4",
+    className,
+  );
 
   if (href) {
     return (
@@ -28,6 +28,7 @@ const CardWrapper = ({ href, className = "", children }: CardWrapperProps) => {
 
   return <div className={classes}>{children}</div>;
 };
+
 const BibloMark = () => (
   <Image
     src={addBasePath("/Biblo-Logo-dark-green.png")}
@@ -40,8 +41,7 @@ const BibloMark = () => (
 
 const SupportDownloadCards = () => {
   return (
-    <section className="mt-auto grid w-full gap-6 md:grid-cols-2">
-      {/* Help and Support */}
+    <section className="mt-auto grid w-full gap-4 md:grid-cols-2">
       <CardWrapper
         href={aboutBibloLink}
         className="bg-card-primary text-card-primary-foreground hover:no-underline"
@@ -54,37 +54,35 @@ const SupportDownloadCards = () => {
         </div>
       </CardWrapper>
 
-      {/* Download App */}
-      <CardWrapper className="bg-[#7B848E]">
-        <Image
-          src={addBasePath("/ereolen_app.png")}
-          alt="eReolen Icon"
-          className="rounded-xl"
-          width={80}
-          height={80}
-        />
-        <div className="ml-4 flex h-full flex-col justify-between">
-          <div className="font-semibold">
-            <Typo as="p" variant="h4">
-              Download eReolens app
-            </Typo>
-          </div>
-
-          <div className="mt-2 flex gap-4">
-            <Link
-              href="https://play.google.com/store/apps/details?id=dk.redia.eReolen"
-              target="_blank"
+      <CardWrapper className="bg-card-secondary text-card-secondary-foreground">
+        <div className="flex items-center gap-4 sm:gap-6">
+          <BibloMark />
+          <div className="flex flex-col items-center justify-center gap-3 sm:items-start">
+            <Typography
+              as="p"
+              variant="p"
+              className="w-full !font-bold sm:text-center"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={addBasePath("/google_play.svg")} alt="Google Play" />
-            </Link>
-            <Link
-              href="https://apps.apple.com/dk/app/ereolen/id1438218229?l=da"
-              target="_blank"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={addBasePath("/app_store.svg")} alt="App Store" />
-            </Link>
+              Download Biblo-appen
+            </Typography>
+            <div className="flex items-center justify-center gap-3">
+              <Link href="https://play.google.com/store/apps/details?id=dk.redia.eReolen">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={addBasePath("/google_play.svg")}
+                  alt="Google Play"
+                  className="h-[20%] w-auto sm:h-10"
+                />
+              </Link>
+              <Link href="https://apps.apple.com/dk/app/ereolen/id1438218229?l=da">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={addBasePath("/app_store.svg")}
+                  alt="App Store"
+                  className="h-[20%] w-auto sm:h-10"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </CardWrapper>

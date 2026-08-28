@@ -20,25 +20,25 @@ const options: HTMLReactParserOptions = {
     switch (domNode.name) {
       case "h1":
         return (
-          <Typography as="h1" variant="display">
+          <Typography as="h1" variant="h1" className={domNode.attribs?.class}>
             {children}
           </Typography>
         );
       case "h2":
         return (
-          <Typography as="h2" variant="h2">
+          <Typography as="h2" variant="h2" className={domNode.attribs?.class}>
             {children}
           </Typography>
         );
       case "h3":
         return (
-          <Typography as="h3" variant="h3">
+          <Typography as="h3" variant="h3" className={domNode.attribs?.class}>
             {children}
           </Typography>
         );
       case "p":
         return (
-          <Typography as="p" variant="p">
+          <Typography as="p" variant="p" className={domNode.attribs?.class}>
             {children}
           </Typography>
         );

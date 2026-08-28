@@ -47,13 +47,19 @@ export default function RootLayout({
           id="ti-loader"
           defer
         />
-        <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js" async
-    data-culture="EN" data-gcm-version="2.0" type="text/javascript"></script>
+        <script
+          id="CookieConsent"
+          src="https://policy.app.cookieinformation.com/uc.js"
+          async
+          data-culture="EN"
+          data-gcm-version="2.0"
+          type="text/javascript"
+        />
       </head>
       <body
         className={`${dmSans.className} flex min-h-screen flex-col antialiased`}
       >
-        <main className="bg-secondary flex flex-1 px-4">
+        <main className="flex flex-1 px-4">
           <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col py-8 md:py-12">
             {children}
           </div>
