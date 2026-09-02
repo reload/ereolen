@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   title: "Biblo",
   description:
     "eReolen hedder nu Biblo. Vælg dit bibliotek her for at gå til dit biblioteks hjemmeside.",
+  icons: {
+    icon: addBasePath("/favicon.png"),
+    shortcut: addBasePath("/favicon.png"),
+    apple: addBasePath("/favicon.png"),
+  },
   openGraph: {
     title: "Biblo",
     description:
