@@ -55,7 +55,7 @@ export function buildRedirectUrl({
     return redirectUrl.toString();
   }
 
-  const redirectPath = customPath || "/om-ereolen";
+  const redirectPath = customPath || "/biblo";
   const redirectUrl = new URL(`https://${libraryDomain}`);
   redirectUrl.pathname = redirectPath;
 

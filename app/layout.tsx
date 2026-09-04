@@ -1,47 +1,39 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import { addBasePath } from "@/lib/basePath";
 
-const sourceSansPro = localFont({
-  src: [
-    {
-      path: "../fonts/source-sans-pro.light.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../fonts/source-sans-pro.semibold.ttf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../fonts/source-sans-pro.bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-source-sans-pro",
+const dmSans = DM_Sans({
+  subsets: ["latin", "latin-ext"],
+  style: ["normal"],
+  axes: ["opsz"],
+  variable: "--font-dm-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ereolen.dk"),
-  title: "eReolen",
+  title: "Biblo",
   description:
-    "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
+    "eReolen hedder nu Biblo. Vælg dit bibliotek her for at gå til dit biblioteks hjemmeside.",
+  icons: {
+    icon: addBasePath("/favicon.png"),
+    shortcut: addBasePath("/favicon.png"),
+    apple: addBasePath("/favicon.png"),
+  },
   openGraph: {
-    title: "eReolen",
+    title: "Biblo",
     description:
-      "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
-    images: [addBasePath("/ereolen_logo_some.png")],
+      "eReolen hedder nu Biblo. Vælg dit bibliotek her for at gå til dit biblioteks hjemmeside.",
+    images: [addBasePath("/Biblo-Logo-green.png")],
   },
   twitter: {
     card: "summary_large_image",
-    title: "eReolen",
+    title: "Biblo",
     description:
-      "eReolen er flyttet til din lokale bibliotekshjemmeside. Vælg dit bibliotek her.",
-    images: [addBasePath("/ereolen_logo_some.png")],
+      "eReolen hedder nu Biblo. Vælg dit bibliotek her for at gå til dit biblioteks hjemmeside.",
+    images: [addBasePath("/Biblo-Logo-green.png")],
   },
 };
 
@@ -51,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="da">
+    <html lang="da" className={dmSans.variable}>
       <head>
         <script
           data-category-consent="cookie_cat_statistic"
@@ -60,13 +52,19 @@ export default function RootLayout({
           id="ti-loader"
           defer
         />
-        <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js" async
-    data-culture="EN" data-gcm-version="2.0" type="text/javascript"></script>
+        <script
+          id="CookieConsent"
+          src="https://policy.app.cookieinformation.com/uc.js"
+          async
+          data-culture="EN"
+          data-gcm-version="2.0"
+          type="text/javascript"
+        />
       </head>
       <body
-        className={`${sourceSansPro.className} flex min-h-screen flex-col antialiased`}
+        className={`${dmSans.className} flex min-h-screen flex-col antialiased`}
       >
-        <main className="bg-secondary flex flex-1 px-4">
+        <main className="flex flex-1 px-4">
           <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col py-8 md:py-12">
             {children}
           </div>

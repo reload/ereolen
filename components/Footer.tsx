@@ -1,31 +1,28 @@
 import { contactFormLink, footerLinks } from "@/content/links";
 import { addBasePath } from "@/lib/basePath";
 import Image from "next/image";
-import React from "react";
-import { Typography as Typo } from "@/components/typography";
+import { Typography } from "@/components/typography";
 import { Link } from "@/components/link";
 
 const Footer = () => {
   return (
-    <footer className="border-t-2 p-4 py-8">
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-4 md:gap-4">
+    <footer className="p-4 sm:py-10 md:py-12">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
         <section aria-labelledby="nyttig-information">
-          <Typo
+          <Typography
             as="h3"
             variant="h4"
-            className="mb-4 text-xl font-semibold"
+            className="mb-4"
             id="nyttig-information"
           >
             Nyttig information
-          </Typo>
+          </Typography>
 
           <nav>
             <ul className="space-y-1">
               {footerLinks.map((link, index) => (
-                <li key={index}>
-                  <Link target="_blank" href={link.href}>
-                    {link.label}
-                  </Link>
+                <li key={link.href + index}>
+                  <Link href={link.href}>{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -33,47 +30,43 @@ const Footer = () => {
         </section>
 
         <section aria-labelledby="kontakt-supporten">
-          <Typo
+          <Typography
             as="h3"
             variant="h4"
-            className="mb-4 text-xl font-semibold"
+            className="mb-4"
             id="kontakt-supporten"
           >
             Kontakt supporten
-          </Typo>
-          <Typo as="p" variant="small" className="mb-2">
+          </Typography>
+          <Typography as="p" variant="small" className="mb-2">
             Alle hverdage kl. 13.00-17.00 <br />
             Fredag kl. 11.00-15.00
-          </Typo>
+          </Typography>
           <Link className="mb-2 block" href="tel:70263636">
             Tlf: 7026 3636
           </Link>
-          <Typo as="p" variant="small" className="mb-2">
-            For henvendelser uden for åbningstiden benyt venligst vores
-            kontaktformular{" "}
+          <Typography as="p" variant="small" className="mb-2">
+            For henvendelser uden for åbningstiden <br />
             <Link href={contactFormLink} className="underline">
-              her
+              benyt venligst vores kontaktformular her
             </Link>
             .
-          </Typo>
+          </Typography>
         </section>
 
-        <div className="mx-auto mt-12 space-y-6 self-center justify-self-end md:col-span-2 md:col-start-3 md:mx-0 md:mt-0">
-          <Image
-            className="mx-auto"
-            src={addBasePath("/ddf_logo.png")}
-            alt="Logo"
-            width={300}
-            height={200}
-          />
-          <div className="text-center">
-            <Typo as="p" variant="small" className="">
-              eReolen er en del af Det Digitale Folkebibliotek
-            </Typo>
-            <Link href="https://detdigitalefolkebibliotek.dk" target="_blank">
-              Læs mere på detdigitalefolkebibliotek.dk
-            </Link>
-          </div>
+        <div className="space-y-4 justify-self-center md:justify-self-end">
+          <Link href="https://detdigitalefolkebibliotek.dk" target="_blank">
+            <Image
+              src={addBasePath("/ddf_logo.png")}
+              alt="Det Digitale Folkebiblioteks Logo"
+              width={280}
+              height={70}
+              className="h-auto w-full max-w-[240px]"
+            />
+            <Typography as="p" variant="small">
+              Biblo er en del af Det Digitale Folkebibliotek
+            </Typography>
+          </Link>
         </div>
       </div>
     </footer>
