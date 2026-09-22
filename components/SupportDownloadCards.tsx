@@ -1,4 +1,4 @@
-import { aboutBibloLink } from "@/content/links";
+import { aboutBibloLink, downloadBibloLink } from "@/content/links";
 import { addBasePath } from "@/lib/basePath";
 import Image from "next/image";
 import React from "react";
@@ -10,9 +10,10 @@ type CardWrapperProps = {
   children: React.ReactNode;
   className?: string;
   href?: string;
+  target?: string;
 };
 
-const CardWrapper = ({ href, className, children }: CardWrapperProps) => {
+const CardWrapper = ({ href, target, className, children }: CardWrapperProps) => {
   const classes = cn(
     "flex min-h-[120px] items-center justify-center rounded-xl p-4",
     className,
@@ -20,7 +21,7 @@ const CardWrapper = ({ href, className, children }: CardWrapperProps) => {
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} target={target} className={classes}>
         {children}
       </Link>
     );
@@ -44,6 +45,7 @@ const SupportDownloadCards = () => {
     <section className="mt-auto grid w-full gap-4 md:grid-cols-2">
       <CardWrapper
         href={aboutBibloLink}
+        target="_blank"
         className="bg-card-primary text-card-primary-foreground hover:no-underline"
       >
         <div className="flex items-center gap-4 md:gap-6">
@@ -54,7 +56,11 @@ const SupportDownloadCards = () => {
         </div>
       </CardWrapper>
 
-      <CardWrapper className="bg-card-secondary text-card-secondary-foreground">
+      <CardWrapper
+        href={downloadBibloLink}
+        target="_blank"
+        className="bg-card-secondary text-card-secondary-foreground hover:no-underline"
+      >
         <div className="flex items-center gap-4 sm:gap-6">
           <BibloMark />
           <div className="flex flex-col items-center justify-center gap-3 sm:items-start">

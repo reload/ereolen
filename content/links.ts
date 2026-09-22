@@ -1,11 +1,11 @@
 export const footerLinks = [
   {
     label: "Hjælp og support",
-    href: "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/6",
+    href: "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/210",
   },
   {
     label: "Hent Biblo-appen",
-    href: "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/6/article/299401218",
+    href: "https://biblo.dk",
   },
   {
     label: "Materialevalg",
@@ -13,12 +13,13 @@ export const footerLinks = [
   },
   {
     label: "Driftsinfo",
-    href: "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/6/topic/d3535950-0d23-4ffe-a41a-e08a6362cc27/article/211255297",
+    href: "https://detdigitalefolkebibliotek.atlassian.net/wiki/external/MGIxNjM4MTUwM2U1NDUzOGI1NjViOTRjM2JkMTgwMzA",
   },
 ];
 
 export const contactFormLink =
-  "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/6";
+  "https://detdigitalefolkebibliotek.atlassian.net/servicedesk/customer/portal/210/create/630";
 
-export const aboutBibloLink =
-  "https://www.detdigitalefolkebibliotek.dk/ereolen";
+export const aboutBibloLink = "https://biblo.dk/ombiblo";
+
+export const downloadBibloLink = "https://biblo.dk";
