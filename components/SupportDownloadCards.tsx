@@ -1,4 +1,4 @@
-import { aboutBibloLink, downloadBibloLink } from "@/content/links";
+import { aboutBibloLink } from "@/content/links";
 import { addBasePath } from "@/lib/basePath";
 import Image from "next/image";
 import React from "react";
@@ -13,7 +13,12 @@ type CardWrapperProps = {
   target?: string;
 };
 
-const CardWrapper = ({ href, target, className, children }: CardWrapperProps) => {
+const CardWrapper = ({
+  href,
+  target,
+  className,
+  children,
+}: CardWrapperProps) => {
   const classes = cn(
     "flex min-h-[120px] items-center justify-center rounded-xl p-4",
     className,
@@ -56,11 +61,7 @@ const SupportDownloadCards = () => {
         </div>
       </CardWrapper>
 
-      <CardWrapper
-        href={downloadBibloLink}
-        target="_blank"
-        className="bg-card-secondary text-card-secondary-foreground hover:no-underline"
-      >
+      <CardWrapper className="bg-card-secondary text-card-secondary-foreground hover:no-underline">
         <div className="flex items-center gap-4 sm:gap-6">
           <BibloMark />
           <div className="flex flex-col items-center justify-center gap-3 sm:items-start">
