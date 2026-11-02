@@ -7,22 +7,27 @@ import { addBasePath } from "@/lib/basePath";
 
 export default function Home() {
   return (
-    <div className="grid h-full w-full flex-1 grid-rows-[auto_min-content] items-center gap-8">
-      <div className="mx-auto grid w-full justify-center space-y-4 py-12">
-        <h1 className="text-primary flex flex-col items-center justify-center gap-4 text-center text-6xl font-extrabold sm:flex-row">
+    <div className="h-sm:py-[2.5vh] h-md:py-[10vh] h-lg:py-[15vh] h-xl:py-[20vh] flex min-w-0 flex-col items-center gap-8 py-[5vh]">
+      <div className="mx-auto grid h-fit w-full max-w-5xl min-w-0 gap-6 space-y-6 pb-6 text-center md:gap-12 md:pb-8">
+        <Typography as="h1" variant="h1" className="inline sm:block">
+          eReolen hedder nu{" "}
           <Image
-            src={addBasePath("/logo-red.png")}
-            alt="EReolen Logo"
-            width={225}
-            height={100}
-            className="h-auto w-full max-w-[225px]"
+            src={addBasePath("/Biblo-Name-green.png")}
+            alt="Biblo"
+            width={202}
+            height={72}
+            className="inline-block h-[0.85em] w-auto translate-x-[7px] translate-y-[-7px]"
+            priority
           />
-          er flyttet
-        </h1>
+        </Typography>
         <HtmlContent src="/content/main.html" />
-        <div className="mx-auto mt-16 space-y-4">
-          <Typography variant={"h3"} as={"h2"}>
-            Vælg din bibliotekskommune for at få adgang til eReolen
+        <div className="mx-auto w-full space-y-4">
+          <Typography
+            as="h2"
+            variant="h3"
+            className="mt-6 mb-4 md:mt-0 md:mb-8"
+          >
+            Vælg din kommune for at gå til dit biblioteks hjemmeside
           </Typography>
           <LibrarySelect />
         </div>

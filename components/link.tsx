@@ -2,15 +2,19 @@ import NextLink from "next/link";
 import { typographyVariants } from "@/components/typography";
 import { cn } from "@/lib/utils";
 
-interface AppLinkProps extends React.ComponentPropsWithoutRef<typeof NextLink> {
-  className?: string;
-  children: React.ReactNode;
-}
+type AppLinkProps = React.ComponentPropsWithoutRef<typeof NextLink>;
 
-export function Link({ href, children, className, ...props }: AppLinkProps) {
+export function Link({
+  href,
+  children,
+  className,
+  target = "_blank",
+  ...props
+}: AppLinkProps) {
   return (
     <NextLink
       href={href}
+      target={target}
       className={cn(
         typographyVariants({ variant: "small" }),
         "hover:underline",
