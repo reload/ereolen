@@ -15,15 +15,45 @@ import {
 
 function Command({
   className,
+  onKeyDown,
+  onPointerMove,
   ...props
 }: React.ComponentProps<typeof CommandPrimitive>) {
+  // cmdk moves data-selected onto an item when the pointer passes over it,
+  // which leaves a keyboard-style highlight behind on a merely hovered row.
+  // Tracking the input device lets the CSS below show that highlight for
+  // keyboard navigation only.
+  const [highlightMode, setHighlightMode] = React.useState<
+    "pointer" | "keyboard"
+  >("pointer");
+
   return (
     <CommandPrimitive
       data-slot="command"
+      data-highlight-mode={highlightMode}
       className={cn(
         "bg-popover text-popover-foreground flex h-full w-full flex-col overflow-hidden rounded-md",
+        // data-selected is cmdk's cursor; data-chosen (set by LibrarySelect) is the
+        // stored choice. The :not() keeps this weak highlight off the chosen row,
+        // which already carries the strong bg-brand/50 from CommandItem.
+        "[&[data-highlight-mode=keyboard]_[data-slot=command-item][data-selected=true]:not([data-chosen=true])]:bg-brand/10",
         className,
       )}
+      onKeyDown={(event) => {
+        if (
+          event.key === "ArrowUp" ||
+          event.key === "ArrowDown" ||
+          event.key === "Home" ||
+          event.key === "End"
+        ) {
+          setHighlightMode("keyboard");
+        }
+        onKeyDown?.(event);
+      }}
+      onPointerMove={(event) => {
+        setHighlightMode("pointer");
+        onPointerMove?.(event);
+      }}
       {...props}
     />
   );
@@ -140,8 +170,8 @@ function CommandItem({
     <CommandPrimitive.Item
       data-slot="command-item"
       className={cn(
-        "data-[selected=true]:bg-accent data-[selected=true]:text-accent-foreground [&_svg:not([class*='text-'])]:text-muted-foreground",
-        "relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-lg outline-hidden select-none data-[disabled=true]:pointer-events-none",
+        "hover:bg-brand/10 data-[chosen=true]:bg-brand/50 data-[chosen=true]:hover:bg-brand/50 [&_svg:not([class*='text-'])]:text-muted-foreground",
+        "text-typo-body-sm relative flex cursor-default items-center gap-2 rounded-sm px-2 py-2 outline-hidden select-none data-[disabled=true]:pointer-events-none",
         "data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className,
       )}
