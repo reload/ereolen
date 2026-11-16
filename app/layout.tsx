@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     title: "Biblo",
     description:
       "eReolen hedder nu Biblo. Vælg dit bibliotek her for at gå til dit biblioteks hjemmeside.",
-    images: [addBasePath("/Biblo-Logo-green.png")],
+    images: [addBasePath("/biblo-some.png")],
   },
   twitter: {
     card: "summary_large_image",
     title: "Biblo",
     description:
       "eReolen hedder nu Biblo. Vælg dit bibliotek her for at gå til dit biblioteks hjemmeside.",
-    images: [addBasePath("/Biblo-Logo-green.png")],
+    images: [addBasePath("/biblo-some.png")],
   },
 };
 
