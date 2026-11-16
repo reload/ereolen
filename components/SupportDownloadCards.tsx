@@ -61,7 +61,7 @@ const SupportDownloadCards = () => {
         </div>
       </CardWrapper>
 
-      <CardWrapper className="bg-card-secondary text-card-secondary-foreground hover:no-underline">
+      <CardWrapper href="http://biblo.dk" target="_blank" className="bg-card-secondary text-card-secondary-foreground hover:no-underline">
         <div className="flex items-center gap-4 sm:gap-6">
           <BibloMark />
           <div className="flex flex-col items-center justify-center gap-3 sm:items-start">
@@ -73,22 +73,18 @@ const SupportDownloadCards = () => {
               Download Biblo-appen
             </Typography>
             <div className="flex items-center justify-center gap-3">
-              <Link href="https://play.google.com/store/apps/details?id=dk.redia.eReolen">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={addBasePath("/google_play.svg")}
                   alt="Google Play"
                   className="h-[20%] w-auto sm:h-10"
                 />
-              </Link>
-              <Link href="https://apps.apple.com/dk/app/ereolen/id1438218229?l=da">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={addBasePath("/app_store.svg")}
                   alt="App Store"
                   className="h-[20%] w-auto sm:h-10"
                 />
-              </Link>
             </div>
           </div>
         </div>
